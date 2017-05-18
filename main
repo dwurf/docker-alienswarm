@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cd /
+mkdir -p /steam
+export HOME=/steam
+source lib.sh
+
+cd $HOME
+require_steamcmd
+require_app
+update_app
+#require_config
+#load_config
+echo 'launching server...'
+launch
+echo 'Server stopped.'
